@@ -4,6 +4,28 @@
 
 package main
 
+import "fmt"
+
 func main() {
+
+	terms := []int{1, 2}
+	last, sum := 0, 0
+
+	for {
+		last = terms[len(terms)-1] + terms[len(terms)-2]
+		if last < 4000000 {
+			terms = append(terms, last)
+		} else {
+			break
+		}
+	}
+
+	for _, value := range terms {
+		if value%2 == 0 {
+			sum += value
+		}
+	}
+
+	fmt.Println("Sum is", sum)
 
 }
