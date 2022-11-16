@@ -4,8 +4,6 @@
 
 package main
 
-import "fmt"
-
 func main() {
 	seq, sum := []int{1, 1}, 0
 	for i := 0; i < 4000000; i = seq[len(seq)-1] + seq[len(seq)-2] {
@@ -14,5 +12,5 @@ func main() {
 		}
 		seq = append(seq, i)
 	}
-	fmt.Println("Sum is", sum)
+	println("Sum is", sum)
 }
