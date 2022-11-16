@@ -3,8 +3,6 @@
 
 package main
 
-import "fmt"
-
 func main() {
 	sum := 0
 	for i := 1; i < 1000; i++ {
@@ -12,5 +10,5 @@ func main() {
 			sum += i
 		}
 	}
-	fmt.Println("Sum is", sum)
+	println("Sum is", sum)
 }
