@@ -7,12 +7,12 @@ package main
 import "fmt"
 
 func main() {
-	terms, sum := []int{1, 1}, 0
-	for last := 0; last < 4000000; last = terms[len(terms)-1] + terms[len(terms)-2] {
-		if last%2 == 0 {
-			sum += last
+	seq, sum := []int{1, 1}, 0
+	for i := 0; i < 4000000; i = seq[len(seq)-1] + seq[len(seq)-2] {
+		if i%2 == 0 {
+			sum += i
 		}
-		terms = append(terms, last)
+		seq = append(seq, i)
 	}
 	fmt.Println("Sum is", sum)
 }
